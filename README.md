@@ -7,4 +7,10 @@
     - The amount of drops 
     - The amount of drops you've kept
     - Automatically calculate the drop percentage based on runs and drops.
-    - Create a text file to help organize you're data
+    - Create a text file to help organize you're data 
+
+# <center> Requirements
+### .NETFramework,Version=v4.7.2
+
+# <center> Contact
+## [Twitter](twitter.com/hoodstrats)
