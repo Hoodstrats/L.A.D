@@ -19,7 +19,7 @@ namespace Hoodstrats.Core
             if (DateTime.Now.Day != _currentDate.Day)
             {
                 _currentDate = DateTime.Now;
-                _dataToSave = DateTime.Now.ToString("MM/dd/yyyy") + "\n" + "Farming:" + farmName + "  " + "Elapsed Time:" + elapsedTime + "\n" + "Runs:" + runs + "  " + "Drops:" + drops + "  " + "Keepers:" + kept + "  " + "Percent:" + percent + "%" + "\n\n";
+                _dataToSave = "---- " + DateTime.Now.ToString("MM/dd/yyyy") + " ----" + "\n" + "Farming:" + farmName + "  " + "Elapsed Time:" + elapsedTime + "\n" + "Runs:" + runs + "  " + "Drops:" + drops + "  " + "Keepers:" + kept + "  " + "Percent:" + percent + "%" + "\n\n";
             }
             else
             {
