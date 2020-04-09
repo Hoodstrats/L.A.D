@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label _helpLabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this._timer = new System.Windows.Forms.Timer(this.components);
             this._timerText = new System.Windows.Forms.Label();
             this._farmNameInput = new System.Windows.Forms.TextBox();
@@ -311,10 +310,10 @@
             this.Controls.Add(this._timerText);
             this.Controls.Add(this._startTimer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.MaximizeBox = false;
             this.Name = "Form1";
+            this.ShowIcon = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "BL3Companion";
             this.ResumeLayout(false);
