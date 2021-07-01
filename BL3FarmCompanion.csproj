@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{AD0D90EA-674A-435D-BD23-FBFBEE16C47E}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Hoodstrats.Core</RootNamespace>
-    <AssemblyName>BL3FarmCompanion</AssemblyName>
+    <RootNamespace>Hood.Core</RootNamespace>
+    <AssemblyName>LAD</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -48,9 +48,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>BL3ICON.ico</ApplicationIcon>
+    <ApplicationIcon>LAD.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -64,11 +67,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Forms\Form1.cs">
+    <Compile Include="Forms\Companion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Forms\Companion.Designer.cs">
+      <DependentUpon>Companion.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\HelpDialogue.cs">
       <SubType>Form</SubType>
@@ -76,12 +79,14 @@
     <Compile Include="Forms\HelpDialogue.Designer.cs">
       <DependentUpon>HelpDialogue.cs</DependentUpon>
     </Compile>
+    <Compile Include="Scripts\ErrorCatcher.cs" />
+    <Compile Include="Scripts\JsonConfig.cs" />
     <Compile Include="Scripts\KeyboardHook.cs" />
     <Compile Include="Scripts\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Scripts\SaveController.cs" />
-    <EmbeddedResource Include="Forms\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Companion.resx">
+      <DependentUpon>Companion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\HelpDialogue.resx">
       <DependentUpon>HelpDialogue.cs</DependentUpon>
@@ -96,6 +101,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -129,6 +135,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="BL3ICON.ico" />
+    <Content Include="LAD.ico" />
     <Content Include="StopWatch.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

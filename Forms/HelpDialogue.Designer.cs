@@ -1,4 +1,4 @@
-﻿namespace Hoodstrats.Core
+﻿namespace Hood.Core
 {
     partial class HelpDialogue
     {
@@ -49,8 +49,8 @@
             // 
             // _twitterLink
             // 
-            this._twitterLink.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this._twitterLink.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this._twitterLink.AutoSize = true;
             this._twitterLink.Location = new System.Drawing.Point(165, 235);

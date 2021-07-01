@@ -4,7 +4,7 @@ using System;
 using System.Diagnostics;
 using System.Windows.Forms;
 
-namespace Hoodstrats.Core
+namespace Hood.Core
 {
     public partial class HelpDialogue : Form
     {

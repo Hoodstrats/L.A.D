@@ -1,6 +1,6 @@
-﻿namespace Hoodstrats.Core
+﻿namespace Hood.Core
 {
-    partial class Form1
+    partial class Companion
     {
         /// <summary>
         /// Required designer variable.
@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label _helpLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Companion));
             this._timer = new System.Windows.Forms.Timer(this.components);
             this._timerText = new System.Windows.Forms.Label();
             this._farmNameInput = new System.Windows.Forms.TextBox();
@@ -47,6 +48,10 @@
             this._resetRun = new System.Windows.Forms.Button();
             this._openLog = new System.Windows.Forms.LinkLabel();
             this._saveButton = new System.Windows.Forms.Button();
+            this._streamerMode = new System.Windows.Forms.CheckBox();
+            this._setCPU = new System.Windows.Forms.CheckBox();
+            this._mayhemSelect = new System.Windows.Forms.ComboBox();
+            this._versionNumber = new System.Windows.Forms.LinkLabel();
             _helpLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -84,10 +89,11 @@
             // _farmNameInput
             // 
             this._farmNameInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this._farmNameInput.Location = new System.Drawing.Point(12, 102);
+            this._farmNameInput.Location = new System.Drawing.Point(12, 77);
             this._farmNameInput.Name = "_farmNameInput";
             this._farmNameInput.Size = new System.Drawing.Size(269, 26);
             this._farmNameInput.TabIndex = 2;
+            this._farmNameInput.Text = "Enter Farm Name";
             // 
             // _dropsLabel
             // 
@@ -114,7 +120,7 @@
             this._farmLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this._farmLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this._farmLabel.ForeColor = System.Drawing.SystemColors.ControlText;
-            this._farmLabel.Location = new System.Drawing.Point(12, 77);
+            this._farmLabel.Location = new System.Drawing.Point(187, 106);
             this._farmLabel.Name = "_farmLabel";
             this._farmLabel.Size = new System.Drawing.Size(94, 22);
             this._farmLabel.TabIndex = 4;
@@ -148,7 +154,7 @@
             this._startTimer.ForeColor = System.Drawing.SystemColors.ControlText;
             this._startTimer.Location = new System.Drawing.Point(232, 9);
             this._startTimer.Name = "_startTimer";
-            this._startTimer.Size = new System.Drawing.Size(132, 51);
+            this._startTimer.Size = new System.Drawing.Size(136, 55);
             this._startTimer.TabIndex = 0;
             this._startTimer.Text = "Start Timer";
             this._startTimer.UseVisualStyleBackColor = false;
@@ -246,11 +252,11 @@
             this._resetRun.ForeColor = System.Drawing.SystemColors.ControlText;
             this._resetRun.Location = new System.Drawing.Point(370, 9);
             this._resetRun.Name = "_resetRun";
-            this._resetRun.Size = new System.Drawing.Size(132, 51);
+            this._resetRun.Size = new System.Drawing.Size(136, 55);
             this._resetRun.TabIndex = 14;
             this._resetRun.Text = "Reset Run";
             this._resetRun.UseVisualStyleBackColor = false;
-            this._resetRun.Click += new System.EventHandler(this._resetRun_Click);
+            this._resetRun.Click += new System.EventHandler(this.ResetRun);
             // 
             // _openLog
             // 
@@ -275,23 +281,75 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this._saveButton.AutoSize = true;
             this._saveButton.BackColor = System.Drawing.Color.Transparent;
-            this._saveButton.BackgroundImage = global::Hoodstrats.Core.Properties.Resources.FloppySave;
+            this._saveButton.BackgroundImage = global::Hood.Core.Properties.Resources.FloppySave;
             this._saveButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this._saveButton.FlatAppearance.BorderSize = 0;
             this._saveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this._saveButton.Location = new System.Drawing.Point(559, 78);
             this._saveButton.Name = "_saveButton";
-            this._saveButton.Size = new System.Drawing.Size(53, 45);
+            this._saveButton.Size = new System.Drawing.Size(57, 49);
             this._saveButton.TabIndex = 6;
             this._saveButton.UseVisualStyleBackColor = false;
             this._saveButton.Click += new System.EventHandler(this._saveButton_Click);
             // 
-            // Form1
+            // _streamerMode
+            // 
+            this._streamerMode.AutoSize = true;
+            this._streamerMode.Location = new System.Drawing.Point(12, 136);
+            this._streamerMode.Name = "_streamerMode";
+            this._streamerMode.Size = new System.Drawing.Size(98, 17);
+            this._streamerMode.TabIndex = 18;
+            this._streamerMode.Text = "Streamer Mode";
+            this._streamerMode.UseVisualStyleBackColor = true;
+            // 
+            // _setCPU
+            // 
+            this._setCPU.AutoSize = true;
+            this._setCPU.Location = new System.Drawing.Point(116, 136);
+            this._setCPU.Name = "_setCPU";
+            this._setCPU.Size = new System.Drawing.Size(82, 17);
+            this._setCPU.TabIndex = 19;
+            this._setCPU.Text = "CPU Priority";
+            this._setCPU.UseVisualStyleBackColor = true;
+            // 
+            // _mayhemSelect
+            // 
+            this._mayhemSelect.Cursor = System.Windows.Forms.Cursors.Hand;
+            this._mayhemSelect.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._mayhemSelect.FormattingEnabled = true;
+            this._mayhemSelect.ItemHeight = 20;
+            this._mayhemSelect.Location = new System.Drawing.Point(12, 102);
+            this._mayhemSelect.Name = "_mayhemSelect";
+            this._mayhemSelect.Size = new System.Drawing.Size(169, 28);
+            this._mayhemSelect.TabIndex = 20;
+            this._mayhemSelect.Text = "Mayhem Level: 0";
+            // 
+            // _versionNumber
+            // 
+            this._versionNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._versionNumber.AutoSize = true;
+            this._versionNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._versionNumber.Location = new System.Drawing.Point(585, 140);
+            this._versionNumber.Name = "_versionNumber";
+            this._versionNumber.Size = new System.Drawing.Size(31, 13);
+            this._versionNumber.TabIndex = 21;
+            this._versionNumber.TabStop = true;
+            this._versionNumber.Text = "0.2.0";
+            this._versionNumber.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this._versionNumber.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this._versionNumber_LinkClicked);
+            // 
+            // Companion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(619, 156);
+            this.Controls.Add(this._versionNumber);
+            this.Controls.Add(this._mayhemSelect);
+            this.Controls.Add(this._setCPU);
+            this.Controls.Add(this._streamerMode);
             this.Controls.Add(this._openLog);
             this.Controls.Add(_helpLabel);
             this.Controls.Add(this._resetRun);
@@ -310,12 +368,13 @@
             this.Controls.Add(this._timerText);
             this.Controls.Add(this._startTimer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.MaximizeBox = false;
-            this.Name = "Form1";
+            this.Name = "Companion";
             this.ShowIcon = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
-            this.Text = "BL3Companion";
+            this.Text = "L.A.D";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -339,6 +398,10 @@
         private System.Windows.Forms.Label _timerText;
         private System.Windows.Forms.Button _resetRun;
         private System.Windows.Forms.LinkLabel _openLog;
+        private System.Windows.Forms.CheckBox _streamerMode;
+        private System.Windows.Forms.CheckBox _setCPU;
+        private System.Windows.Forms.ComboBox _mayhemSelect;
+        private System.Windows.Forms.LinkLabel _versionNumber;
     }
 }
 

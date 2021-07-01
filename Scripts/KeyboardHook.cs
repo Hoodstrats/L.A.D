@@ -4,7 +4,7 @@ using System;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
-namespace Hoodstrats.Core
+namespace Hood.Core
 {
     /// <summary>
     /// The enumeration of possible modifiers.

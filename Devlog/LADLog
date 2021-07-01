@@ -1,0 +1,53 @@
+The B.A.D app (borderlands automated database)(rename form borderlands farming companion)
+
+[TODO]
+- Remove farm label clicking functionality (remove it completely just havet he input box)
+- Store the DATETIME in the config.json so when the user closes the program and reopens, the save doesn't get treated as a new day and the farms get put within the same day bracket
+	- Currently when opening the program that session will be treated as a "new day"
+- Do the clicks and all other events manually not with built in 
+- Take into account the drop percentages set by the game according to mayhem level
+	- Make them affect the drop calculations
+- Make a HELP intro form. Displays how to use the program and some features etc.
+	- Add checkbox that stores json variable to "SHOW MESSAGE AT STARTUP" 
+- Clicking each label should let you edit the textbox value under like the farm label does
+
+[MAYBES]
+- Option to save the file as an excel file instead of text 
+- Maybe add a check mark for each option in the config file that can be changed
+- Make it that clicking the labels for each text box activates it like the farm name text
+- Multi client info update ala online multiplayer (1 person updates for multiple sync)
+- Checkboxes for individual settings in CONFIG INI 	
+	(C:\Users\hoodstrats\Documents\My games\Borderlands 3\Saved\Config\WindowsNoEditor\GameUserSettings.ini)
+
+#Include this in the launcher
+//This along with the yoinker and the snowball mute 
+- Need version numbers in their build folders
+- Need to include that in the google drive along with a zipped version of the files needed
+- Uses Webclient class from C# kind of how we do in Unity with webrequest except we can download files async etc
+
+[Notes]
+- Might have to switch to WPF and use the material skin system that's actually up to date over there instead of winforms altogether
+- Using the material skin causes a lot of issues with the basic functionality of some of the controls. Like disabling them doesn't work as intended. Some of the click functionalities are broken too.
+- Radio buttons are meant to be used with multiple selections that way you can turn one off and the other on etc 
+	- Checkboxes are much easier to use in WINFORMS for true/false
+Icon sizes : 256 x 256
+
+
+		
+Borderlands App
+For the borderlands program use MATERIAL skin to redo the ui
+- Implement the EXCEL export feature and organize it into color coded columns depending on amount of drops etc
+	- Green would be a good run to drop ratio
+	- Red would be bad 
+	- Split the excel into dates like the notepad 
+	
+	
+
+MATERIAL SKIN (seems to work with WinForm)
+https://github.com/IgnaceMaes/MaterialSkin
+
+The B.A.D app (borderlands automatic database)
+- Make it using the material skin and have "tabs" one for the main program and one that displays a list essentially displays the information in the farmlog.txt except organized into a spreadsheet format 
+
+
+
