@@ -1,6 +1,6 @@
-The B.A.D app (borderlands automated database)(rename form borderlands farming companion)
-
 [TODO]
+- Make a single executable like the gacha launcher
+- Link the version linklable to a patch notes devlog on itch/github releases
 - Remove farm label clicking functionality (remove it completely just havet he input box)
 - Store the DATETIME in the config.json so when the user closes the program and reopens, the save doesn't get treated as a new day and the farms get put within the same day bracket
 	- Currently when opening the program that session will be treated as a "new day"

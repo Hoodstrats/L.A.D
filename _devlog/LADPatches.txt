@@ -5,6 +5,7 @@
 - Fixed: Merged all the changes made in the DEV PATCH MADE BETWEEN 4/15 - 4/26 (before the app was broken)
 
 - Change: Renamed to L.A.D (Looter Automated Database) since will be generalizing it
+- Change: Mayhem level selector positioning and drop down readability 
 
 
 --------------------------------OLD PATCH NOTES BEFORE BROKEN---------------------------------------------------------

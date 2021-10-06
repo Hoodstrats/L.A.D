@@ -336,7 +336,7 @@
             this._versionNumber.Size = new System.Drawing.Size(31, 13);
             this._versionNumber.TabIndex = 21;
             this._versionNumber.TabStop = true;
-            this._versionNumber.Text = "0.2.0";
+            this._versionNumber.Text = "1.0.1";
             this._versionNumber.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this._versionNumber.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this._versionNumber_LinkClicked);
             // 
